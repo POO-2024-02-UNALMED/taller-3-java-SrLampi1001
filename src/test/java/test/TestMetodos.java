@@ -1,19 +1,14 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
-import taller3.televisores.*;
+import taller3.televisores.Control;
+import taller3.televisores.Marca;
+import taller3.televisores.TV;
 
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class TestMetodos {
@@ -110,7 +105,7 @@ public class TestMetodos {
 		tv7.setCanal(35);
 		tv7.canalDown();
 		tv7.setCanal(200);
-		
+
 		boolean ok = false;
 		if (tv1.getCanal() == 78 && 
 			tv2.getCanal() == 3 &&
